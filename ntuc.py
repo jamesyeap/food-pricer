@@ -80,10 +80,25 @@ def searchFoodProduct(keywords):
 					priceList.append(to_numeric(cleanedPrice))
 
 			"""
-				Step 3: Add the title, price and link to the food product to the result object
+				Step 3: Find the weight/volume of the food product
+			"""
+			units = [
+				'kg', 'KG',
+				'g', 'G',
+				'ml', 'ML'
+				'l', 'L'
+			]
+
+			measurement = ""
+			for span in spanList:
+				if (any(x in span.text for x in units)):
+					measurement = span.text
+			"""
+				Step 4: Add the title, price and link to the food product to the result object
 			"""
 			result[(image[0].attrs['title'])] = { 
 				'price' : min(priceList), 
+				'measurement': measurement,
 				'link': linkToProduct,
 			}
 					
