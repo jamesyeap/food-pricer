@@ -25,7 +25,7 @@ headers = {'User-Agent': 'Mozilla/5.0'}
 		# 		'link': '/product/aw-s-market-duck-breast-whole-800-g-90018554'}
 		#	}
 		#}
-def searchFoodProduct(keywords):
+def search(keywords):
 	# a function to generate the search-query URL
 	def generateURL(url, keywords):
 		queryURL = url
@@ -94,18 +94,13 @@ def searchFoodProduct(keywords):
 				if (any(x in span.text for x in units)):
 					measurement = span.text
 			"""
-				Step 4: Add the title, price and link to the food product to the result object
+				Step 4: Add the title, price, measurement and link to the food product to the result object
 			"""
 			result[(image[0].attrs['title'])] = { 
 				'price' : min(priceList), 
 				'measurement': measurement,
-				'link': linkToProduct,
+				'link': "https://www.fairprice.com.sg" + linkToProduct,
 			}
 					
 	return result
 
-# DOES IT WORK?
-print(searchFoodProduct("chicken breast whole"))
-
-	
-	
