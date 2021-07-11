@@ -1,4 +1,4 @@
-An API used for fetching the prices of food products from online supermarkets in Singapore (only supports NTUC at right now).
+An API used for fetching the prices of food products from online supermarkets in Singapore (only supports NTUC right now.)
 
 ## Usage
 
