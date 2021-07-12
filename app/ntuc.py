@@ -102,6 +102,7 @@ def search(keywords):
 				'price': min(priceList), 
 				'measurement': measurement,
 				'link': "https://www.fairprice.com.sg" + linkToProduct,
+				'supermarket': 'ntuc'
          	})
 					
 	return result
