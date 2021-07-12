@@ -8,10 +8,10 @@ app.config["DEBUG"] = True
 
 @app.route('/', methods=['POST'])
 def queryAll():
-    resultsNTUC = searchNTUC(request.get_json()['query'])
     resultsColdStorage = searchColdStorage(request.get_json()['query']) 
+    resultsNTUC = searchNTUC(request.get_json()['query'])
 
-    resultsCombined = resultsNTUC + resultsColdStorage
+    resultsCombined = resultsColdStorage + resultsNTUC
 
     return jsonify({"results": resultsCombined})
 
