@@ -86,7 +86,7 @@ def search(keywords):
 			'title': titles[i],
 			'price': prices[i],
 			'measurement': measurements[i],
-			'link': links[i],
+			'link': "https://coldstorage.com.sg" + links[i],
 			'supermarket': 'cold-storage'
 		})
 	
