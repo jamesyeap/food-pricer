@@ -7,4 +7,4 @@ app.config["DEBUG"] = True
 
 @app.route('/ntuc/', methods=['POST'])
 def queryNTUC():
-    return searchNTUC(request.form['query'])
+    return searchNTUC(request.get_json()['query'])
