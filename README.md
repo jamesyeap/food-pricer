@@ -70,21 +70,21 @@ Request method | API endpoint
 {
     "results": [
         {
-            "link": "/fresh-s-l-chkn-breast-4-5034255",
+            "link": "https://coldstorage.com.sg/fresh-s-l-chkn-breast-4-5034255",
             "measurement": "1PAK",
             "price": "7.35",
             "supermarket": "cold-storage",
             "title": "Skinless Chicken Breast 4 Pieces"
         },
         {
-            "link": "/h-fresh-chicken-breast-2-5034252",
+            "link": "https://coldstorage.com.sg/h-fresh-chicken-breast-2-5034252",
             "measurement": "1PAK",
             "price": "3.9",
             "supermarket": "cold-storage",
             "title": "Fresh Chicken Breast 2 Pieces"
         },
         {
-            "link": "/fresh-chicken-breast-4-5034253",
+            "link": "https://coldstorage.com.sg/fresh-chicken-breast-4-5034253",
             "measurement": "1PAK",
             "price": "7.35",
             "supermarket": "cold-storage",
