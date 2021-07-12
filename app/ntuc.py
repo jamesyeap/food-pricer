@@ -91,7 +91,7 @@ def search(keywords):
 
 			measurement = ""
 			for span in spanList:
-				if (any(x in span.text for x in units)):
+				if (any(x in span.text for x in units) & (len(span.text) <= 15)):
 					measurement = span.text
 
 			"""
