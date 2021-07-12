@@ -41,8 +41,8 @@ def search(keywords):
 
 	matches = soup.select('div[class*="product-container"]')
 
-	# initialize the dictionary to be returned
-	result = {}
+	# initialize the array to be returned
+	result = []
 
 	for elem in matches:
 		matches = elem.findChildren("a", recursive=False) 
@@ -93,14 +93,16 @@ def search(keywords):
 			for span in spanList:
 				if (any(x in span.text for x in units)):
 					measurement = span.text
+
 			"""
 				Step 4: Add the title, price, measurement and link to the food product to the result object
 			"""
-			result[(image[0].attrs['title'])] = { 
-				'price' : min(priceList), 
+			result.append({
+				'title': image[0].attrs['title'],
+				'price': min(priceList), 
 				'measurement': measurement,
 				'link': "https://www.fairprice.com.sg" + linkToProduct,
-			}
+         	})
 					
 	return result
 
